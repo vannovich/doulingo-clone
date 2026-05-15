@@ -1,3 +1,4 @@
+import { Link, type Href } from "expo-router";
 import { Image, Text, View } from "react-native";
 
 import { images } from "@/constants/images";
@@ -12,11 +13,17 @@ export default function Index() {
           resizeMode="contain"
         />
         <View className="items-center gap-2">
-          <Text className="type-h1 text-center">Lingua</Text>
+          <Text className="type-h1 text-center">muolingo</Text>
           <Text className="type-body-md text-center color-lingua-green">
             A playful AI language learning app built with Expo.
           </Text>
         </View>
+        <Link
+          href={"/onboarding" as Href}
+          className="app-button__primary w-full text-center font-poppins-semibold text-base text-white"
+        >
+          Open onboarding
+        </Link>
       </View>
     </View>
   );
