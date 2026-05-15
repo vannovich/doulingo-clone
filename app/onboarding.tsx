@@ -1,6 +1,6 @@
 import { MaterialIcons } from "@expo/vector-icons";
-import { Stack } from "expo-router";
-import { Image, Text, View } from "react-native";
+import { Link, Stack, type Href } from "expo-router";
+import { Image, Pressable, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { images } from "@/constants/images";
@@ -69,26 +69,23 @@ export default function OnboardingScreen() {
             resizeMode="contain"
           />
         </View>
-        <View className="flex-row items-center justify-center mt-6 mb-2">
-          <View className="h-2 w-2 rounded-full bg-[#5A3BFF]" />
-          <View className="h-2 w-2 rounded-full bg-[#D6D6E0] mx-2" />
-          <View className="h-2 w-2 rounded-full bg-[#D6D6E0]" />
-        </View>
         {/* Button */}
-        <View className="mt-6 rounded-2xl bg-[#5A3BFF] shadow-md active:opacity-90">
-          <View className="min-h-[64px] flex-row items-center justify-center px-6">
-            <Text className="font-poppins-bold text-[20px] text-white">
-              Get Started
-            </Text>
+        <Link href={"/sign-up" as Href} asChild>
+          <Pressable className="mt-6 rounded-2xl bg-[#5A3BFF] shadow-md active:opacity-90">
+            <View className="min-h-[64px] flex-row items-center justify-center px-6">
+              <Text className="font-poppins-bold text-[20px] text-white">
+                Get Started
+              </Text>
 
-            <MaterialIcons
-              name="keyboard-arrow-right"
-              size={38}
-              color="#FFFFFF"
-              style={{ position: "absolute", right: 20 }}
-            />
-          </View>
-        </View>
+              <MaterialIcons
+                name="keyboard-arrow-right"
+                size={38}
+                color="#FFFFFF"
+                style={{ position: "absolute", right: 20 }}
+              />
+            </View>
+          </Pressable>
+        </Link>
       </View>
     </SafeAreaView>
   );
