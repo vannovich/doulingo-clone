@@ -1,0 +1,171 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css";
+
+@import "nativewind/theme";
+
+@theme {
+  --font-poppins: "Poppins-Regular";
+  --font-poppins-medium: "Poppins-Medium";
+  --font-poppins-semibold: "Poppins-SemiBold";
+  --font-poppins-bold: "Poppins-Bold";
+
+  --color-lingua-purple: #6c4ef5;
+  --color-lingua-deep-purple: #5b3bf6;
+  --color-lingua-blue: #4d8bff;
+  --color-lingua-green: #21c16b;
+
+  --color-success: #21c16b;
+  --color-warning: #ffc800;
+  --color-streak: #ff8a00;
+  --color-error: #ff4d4f;
+  --color-info: #4d8bff;
+
+  --color-text-primary: #0d132b;
+  --color-text-secondary: #6b7280;
+  --color-border: #e5e7eb;
+  --color-surface: #f6f7fb;
+  --color-background: #ffffff;
+
+  --radius-lingua-sm: 8px;
+  --radius-lingua-md: 12px;
+  --radius-lingua-lg: 16px;
+  --radius-lingua-xl: 24px;
+}
+
+@utility app-screen {
+  background-color: var(--color-background);
+}
+
+@utility app-section {
+  gap: 16px;
+}
+
+@utility app-card {
+  background-color: var(--color-background);
+  border-color: var(--color-border);
+  border-radius: var(--radius-lingua-lg);
+  border-width: 1px;
+  box-shadow: 0 8px 24px rgba(13, 19, 43, 0.06);
+}
+
+@utility app-card__surface {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lingua-lg);
+}
+
+@utility app-divider {
+  background-color: var(--color-border);
+  height: 1px;
+}
+
+@utility app-button__primary {
+  align-items: center;
+  background-color: var(--color-lingua-purple);
+  border-radius: 16px;
+  box-shadow: 0 4px 0 rgba(13, 19, 43, 0.12);
+  justify-content: center;
+  min-height: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@utility app-button__secondary {
+  align-items: center;
+  background-color: var(--color-surface);
+  border-color: var(--color-border);
+  border-radius: 16px;
+  border-width: 1px;
+  justify-content: center;
+  min-height: 56px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@utility app-progress__track {
+  background-color: var(--color-border);
+  border-radius: 999px;
+  height: 12px;
+  overflow: hidden;
+}
+
+@utility app-progress__fill {
+  background-color: var(--color-lingua-green);
+  border-radius: 999px;
+  height: 12px;
+}
+
+@utility app-chip {
+  align-items: center;
+  border-radius: 999px;
+  flex-direction: row;
+  gap: 6px;
+  min-height: 32px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+@utility type-h1 {
+  color: var(--color-text-primary);
+  font-family: "Poppins-Bold";
+  font-size: 32px;
+  line-height: 38.4px;
+}
+
+@utility type-h2 {
+  color: var(--color-text-primary);
+  font-family: "Poppins-SemiBold";
+  font-size: 24px;
+  line-height: 31.2px;
+}
+
+@utility type-h3 {
+  color: var(--color-text-primary);
+  font-family: "Poppins-SemiBold";
+  font-size: 20px;
+  line-height: 26px;
+}
+
+@utility type-h4 {
+  color: var(--color-text-primary);
+  font-family: "Poppins-Medium";
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+@utility type-body-lg {
+  color: var(--color-text-secondary);
+  font-family: "Poppins-Regular";
+  font-size: 16px;
+  line-height: 25.6px;
+}
+
+@utility type-body-md {
+  color: var(--color-text-secondary);
+  font-family: "Poppins-Regular";
+  font-size: 14px;
+  line-height: 22.4px;
+}
+
+@utility type-body-sm {
+  color: var(--color-text-secondary);
+  font-family: "Poppins-Regular";
+  font-size: 13px;
+  line-height: 20.8px;
+}
+
+@utility type-caption {
+  color: var(--color-text-secondary);
+  font-family: "Poppins-Regular";
+  font-size: 11px;
+  line-height: 15.4px;
+}
+
+@utility type-label {
+  color: var(--color-text-secondary);
+  font-family: "Poppins-SemiBold";
+  font-size: 13px;
+  letter-spacing: 0px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
